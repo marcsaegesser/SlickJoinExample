@@ -1,13 +1,12 @@
 package example
 
 object Example {
-  // import slick.driver.H2Driver.api._
-  import slick.driver.MySQLDriver.api._
+  import slick.jdbc.H2Profile.api._
 
   def main(args: Array[String]): Unit = {
 
     val url = s"jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"
-    val db = Database.forURL(url, driver="org.h2.Driver")
+    val db = Database.forURL(url)
 
     val q1 = aTable.joinLeft(bTable).on(_.bId === _.id)
     println(s"q1 = ${q1.result.statements.mkString}")

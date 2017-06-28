@@ -18,7 +18,7 @@ lazy val slickJoins = (project in file("."))
     ),
 
     libraryDependencies ++= Seq(
-      "com.typesafe.slick" %% "slick" % "3.1.1",
+      "com.typesafe.slick" %% "slick" % "3.2.0",
       "com.h2database"     %  "h2"    % "1.4.196"
     ),
 
